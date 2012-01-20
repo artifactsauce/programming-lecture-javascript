@@ -1,0 +1,54 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="author" content="Kenji Akiyama">
+<title>講義資料 9</title>
+</head>
+<body>
+<h1>講義資料 9</h1>
+<p>
+  Input a number: 
+  <input type="text" id="input-text">
+  <input type="button" value="Click" onclick="doit()">
+  <span id="message"></span>
+</p>
+<p id="answer"></p>
+<p><a href="index.html">最初のページに戻る</a></p>
+<script type="text/javascript">
+  <!--
+      function doit() {
+        var number, message;
+        number = document.getElementById( "input-text" ).value;
+        message = document.getElementById( "message" );
+        
+        if ( number == "" ) {
+          message.innerHTML = "何も入力されていません";
+        }
+        else if ( isNaN( number ) ) {
+          message.innerHTML = "これは数値ではありません";
+        }
+        else {
+          message.innerHTML = number + "以下のフィボナッチ数列を表示します";
+          fibonacci( number );
+        }
+      }
+
+      function fibonacci( number ) {
+        var answer, seq, sum, i;
+        answer = document.getElementById( "answer" );
+        seq = [ 0, 1 ];
+        
+        i = 0;
+        while ( true ) {
+          sum = seq[i] + seq[++i];
+          if ( sum > number ) break;
+          seq.push( sum );
+        }
+        
+        answer.innerHTML = seq.join(", ");
+      }
+      // -->
+</script>
+</body>
+</html>
